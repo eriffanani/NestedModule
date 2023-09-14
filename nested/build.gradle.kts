@@ -1,9 +1,8 @@
 plugins {
     id("com.android.library")
-    id("maven-publish")
 }
 
-afterEvaluate {
+/*afterEvaluate {
     publishing {
         publications {
             create<MavenPublication>("release") {
@@ -16,7 +15,7 @@ afterEvaluate {
             }
         }
     }
-}
+}*/
 
 android {
     namespace = "com.erif.nested"
@@ -44,6 +43,10 @@ android {
         targetCompatibility = JavaVersion.VERSION_17
     }
 
+}
+
+apply {
+    from("$rootDir/mvn-gradle-push.gradle")
 }
 
 dependencies {
