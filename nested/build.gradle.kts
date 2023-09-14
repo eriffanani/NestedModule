@@ -9,7 +9,7 @@ afterEvaluate {
             create<MavenPublication>("release") {
                 groupId = "com.github.eriffanani"
                 artifactId = "nested"
-                version = "0.0.1"
+                version = "0.0.2"
                 afterEvaluate {
                     artifact(tasks.getByName("bundleReleaseAar"))
                 }
@@ -38,10 +38,12 @@ android {
             )
         }
     }
+
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_1_8
-        targetCompatibility = JavaVersion.VERSION_1_8
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
     }
+
 }
 
 dependencies {
