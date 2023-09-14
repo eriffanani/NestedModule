@@ -8,8 +8,8 @@ afterEvaluate {
         publications {
             create<MavenPublication>("release") {
                 groupId = "com.github.eriffanani"
-                artifactId = "nested"
-                version = "0.0.2"
+                artifactId = "NestedModule"
+                version = "0.0.3"
                 afterEvaluate {
                     artifact(tasks.getByName("bundleReleaseAar"))
                 }
